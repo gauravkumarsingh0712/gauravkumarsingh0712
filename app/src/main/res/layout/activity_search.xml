@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sortFilterSearchRLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorPrimary"
+        app:layout_behavior="com.mirraw.android.ui.widgets.behavior.ScrollingSortFilterBehavior">
+
+        <LinearLayout
+            android:id="@+id/main_sort_filter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:weightSum="2">
+
+            <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/main_sort_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:rv_alpha="@integer/ripple_aplha_filter_sort"
+                app:rv_color="@color/material_grey_500"
+                app:rv_framerate="@integer/ripple_framerate"
+                app:rv_rippleDuration="@integer/ripple_duration"
+                ripple:rv_type="rectangle">
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/sort_imageview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/sort" />
+
+                    <TextView
+                        android:id="@+id/sortButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:text="Sort"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+            </com.andexert.library.RippleView>
+
+            <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/main_filter_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:rv_alpha="@integer/ripple_aplha_filter_sort"
+                app:rv_color="@color/material_grey_500"
+                app:rv_framerate="@integer/ripple_framerate"
+                app:rv_rippleDuration="@integer/ripple_duration"
+                ripple:rv_type="rectangle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/filter_imageview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/filter" />
+
+                    <TextView
+                        android:id="@+id/filterButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:text="Filter"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+            </com.andexert.library.RippleView>
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/padding_normal"
+            android:background="@android:color/white" />
+
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
+
+    <!--
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>-->

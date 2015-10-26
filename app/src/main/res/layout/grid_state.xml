@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:ripple="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/stateTextRippleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:rv_alpha="@integer/ripple_aplha"
+        app:rv_color="@color/material_grey_500"
+        app:rv_framerate="@integer/ripple_framerate"
+        app:rv_rippleDuration="@integer/ripple_duration"
+        ripple:rv_type="rectangle">
+
+        <TextView
+            android:id="@+id/stateName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_large"
+            android:text=""
+
+            />
+    </com.andexert.library.RippleView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_line" />
+</LinearLayout>

@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/margin_normal"
+    android:paddingRight="@dimen/margin_normal"
+    tools:context="com.mirraw.android.ui.fragments.ProductDetailStitchingFragment">
+
+    <TextView
+        android:id="@+id/stitchingTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Time"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtStitchingTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/stitchingTime"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal" />
+
+    <TextView
+        android:id="@+id/stitchingCharges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtStitchingTime"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Charges"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtStitchingCharges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/stitchingCharges"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal" />
+
+    <TextView
+        android:id="@+id/stitchingReturns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtStitchingCharges"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Returns"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtStitchingReturns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/stitchingReturns"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal" />
+
+    <TextView
+        android:id="@+id/stitchingInst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtStitchingReturns"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Instructions"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtStitchingInst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/stitchingInst"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal" />
+
+</RelativeLayout>

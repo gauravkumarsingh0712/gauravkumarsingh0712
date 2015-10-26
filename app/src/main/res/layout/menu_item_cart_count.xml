@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:ripple="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rippleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_small"
+        app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+        app:rv_color="@color/material_grey_500"
+        app:rv_framerate="@integer/ripple_framerate"
+        app:rv_rippleDuration="@integer/ripple_duration"
+        ripple:rv_type="rectangle">
+
+        <!-- Menu Item Image -->
+        <ImageView
+            android:id="@+id/img_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_shopping_cart_24dp" />
+
+        <!-- Badge Count -->
+        <TextView
+            android:id="@+id/cartCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_view"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="1"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </com.andexert.library.RippleView>
+</RelativeLayout>

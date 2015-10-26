@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|center_horizontal"
+    android:background="@drawable/top_round_corners"
+    android:clickable="true"
+
+    >
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/connectUsingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/padding_large"
+            android:text="Connect using"
+            android:textSize="@dimen/text_size_normal" />
+
+        <LinearLayout
+            android:id="@+id/loginOptionsLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/connectUsingTextView"
+
+
+            android:layout_centerHorizontal="true">
+
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:enabled="false" />
+
+            <com.facebook.login.widget.LoginButton xmlns:facebook="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/btnFacebookLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/facebook_margin_top"
+                android:paddingBottom="@dimen/padding_normal"
+                android:paddingTop="@dimen/padding_normal"
+                android:textSize="@dimen/text_size_normal"
+                facebook:com_facebook_login_text="Facebook" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/emailDividerLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginOptionsLL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="@dimen/padding_normal"
+                android:background="@color/light_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/or_use_email" />
+
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/padding_normal"
+                android:background="@color/light_line" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailDividerLL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp">
+
+            <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/loginRippleView"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+                app:rv_color="@color/white"
+                app:rv_framerate="@integer/ripple_framerate"
+                app:rv_rippleDuration="@integer/ripple_duration"
+
+                ripple:rv_type="rectangle">
+
+                <Button
+
+                    android:id="@+id/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_button_round_corners"
+                    android:text="Login" />
+            </com.andexert.library.RippleView>
+
+            <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/registerRippleView"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="25dp"
+                app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+                app:rv_color="@color/white"
+                app:rv_framerate="@integer/ripple_framerate"
+                app:rv_rippleDuration="@integer/ripple_duration"
+                ripple:rv_type="rectangle">
+
+                <Button
+
+                    android:id="@+id/register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_button_round_corners"
+                    android:text="Register" />
+            </com.andexert.library.RippleView>
+        </LinearLayout>
+
+
+        />
+    </RelativeLayout>
+
+
+</RelativeLayout>

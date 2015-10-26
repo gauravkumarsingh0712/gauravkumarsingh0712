@@ -1,0 +1,65 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="item_margin_small">0dp</dimen>
+    <dimen name="item_margin">8dp</dimen>
+
+    //margin
+    <dimen name="margin_small">5dp</dimen>
+    <dimen name="margin_normal">15dp</dimen>
+    <dimen name="margin_large">25dp</dimen>
+    <dimen name="margin_xlarge">30dp</dimen>
+    <dimen name="margin_xxlarge">40dp</dimen>
+    <dimen name="margin_xxxlarge">50dp</dimen>
+
+
+    <dimen name="margin_bottom">70dp</dimen>
+
+
+    // padding
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_normal">10dp</dimen>
+    <dimen name="padding_large">20dp</dimen>
+    <dimen name="padding_xlarge">30dp</dimen>
+    <dimen name="padding_xxlarge">40dp</dimen>
+    <dimen name="padding_xxxlarge">50dp</dimen>
+
+    // widths of widgets
+    <dimen name="width_normal">300dp</dimen>
+    <dimen name="width_large">600dp</dimen>
+    <dimen name="width_xlarge">900dp</dimen>
+    <dimen name="width_small">150dp</dimen>
+
+    //text sizes
+    <dimen name="text_size_xsmall">10sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_normal">15sp</dimen>
+    <dimen name="text_size_large">17sp</dimen>
+    <dimen name="text_size_xlarge">20sp</dimen>
+
+    //side of search icon
+    <dimen name="side_large">40dp</dimen>
+
+
+    //registration fragment
+    <dimen name="registration_form_width">350dp</dimen>
+
+    //login fragment
+    <dimen name="facebook_margin_top">4dp</dimen>
+    <dimen name="recycler_view_bottom_margin">50dp</dimen>
+    <dimen name="paddin_xsmall">3dp</dimen>
+
+    <dimen name="address_button_size">35dp</dimen>
+
+    <!--Welcome sliding page  -->
+    <dimen name="welcome_images_size">360.0dip</dimen>
+    <dimen name="welcome_images_margin_top">0.0dip</dimen>
+    <dimen name="welcome_heading_margin_bottom">12.0dip</dimen>
+    <dimen name="welcome_text_margin">48.0dip</dimen>
+    <dimen name="welcome_heading">24.0sp</dimen>
+    <dimen name="welcome_text_margin_bottom">12.0dip</dimen>
+    <dimen name="welcome_content_min_height">96.0dip</dimen>
+    <dimen name="welcome_content">16.0sp</dimen>
+
+</resources>

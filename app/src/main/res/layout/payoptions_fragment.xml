@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_normal"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:minWidth="@dimen/width_normal">
+
+        <TextView
+            android:id="@+id/payment_options_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/payment_options_layout"
+            android:layout_centerVertical="true"
+            android:text="@string/paymentOptionsHead" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shadow_border_layout"
+        android:minWidth="@dimen/width_normal"
+        android:paddingBottom="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_large">
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/paypal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            app:rv_alpha="@integer/ripple_aplha"
+            app:rv_color="@color/material_grey_500"
+            app:rv_framerate="@integer/ripple_framerate"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/padding_xlarge"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="left|center"
+                android:text="@string/paypal"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+        </com.andexert.library.RippleView>
+
+        <View
+            android:id="@+id/paypal_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/paypal"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="#12000000" />
+
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/bankdeposit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paypal_view"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            app:rv_alpha="@integer/ripple_aplha"
+            app:rv_color="@color/material_grey_500"
+            app:rv_framerate="@integer/ripple_framerate"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/padding_xlarge"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="left|center"
+                android:text="@string/bankdeposit"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+        </com.andexert.library.RippleView>
+
+        <View
+            android:id="@+id/bankdeposit_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/bankdeposit"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="#12000000" />
+
+        <!--<TextView
+            android:id="@+id/stored_cards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bankdeposit_view"
+            android:background="@android:color/transparent"
+            android:drawablePadding="@dimen/padding_xlarge"
+            android:drawableRight="@drawable/arrow"
+            android:gravity="left|center"
+            android:text="@string/storedCards"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/stored_cards_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/stored_cards"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="#12000000" />-->
+
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bankdeposit_view"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            app:rv_alpha="@integer/ripple_aplha"
+            app:rv_color="@color/material_grey_500"
+            app:rv_framerate="@integer/ripple_framerate"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/padding_xlarge"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="left|center"
+                android:text="@string/cardPayment"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+        </com.andexert.library.RippleView>
+
+        <View
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/card_payment"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="#12000000" />
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/netbanking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_view"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            app:rv_alpha="@integer/ripple_aplha"
+            app:rv_color="@color/material_grey_500"
+            app:rv_framerate="@integer/ripple_framerate"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/padding_xlarge"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="left|center"
+                android:text="@string/netbanking"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+        </com.andexert.library.RippleView>
+
+        <View
+            android:id="@+id/netbanking_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/netbanking"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="#12000000" />
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/creditCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/netbanking_view"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            app:rv_alpha="@integer/ripple_aplha"
+            app:rv_color="@color/material_grey_500"
+            app:rv_framerate="@integer/ripple_framerate"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/padding_xlarge"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="left|center"
+                android:text="@string/creditCardPaypal"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+        </com.andexert.library.RippleView>
+
+        <View
+            android:id="@+id/creditCard_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/creditCard"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="#12000000" />
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/creditCard_view"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            app:rv_alpha="@integer/ripple_aplha"
+            app:rv_color="@color/material_grey_500"
+            app:rv_framerate="@integer/ripple_framerate"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/padding_xlarge"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="left|center"
+                android:text="@string/cod"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+        </com.andexert.library.RippleView>
+
+        <View
+            android:id="@+id/cod_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/cod"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="#12000000" />
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cbd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cod_view"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            app:rv_alpha="@integer/ripple_aplha"
+            app:rv_color="@color/material_grey_500"
+            app:rv_framerate="@integer/ripple_framerate"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/padding_xlarge"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="left|center"
+                android:text="@string/cbd"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+        </com.andexert.library.RippleView>
+
+        <View
+            android:id="@+id/cbd_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/cbd"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="#12000000" />
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/payuMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cbd_view"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            app:rv_alpha="@integer/ripple_aplha"
+            app:rv_color="@color/material_grey_500"
+            app:rv_framerate="@integer/ripple_framerate"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawablePadding="@dimen/padding_xlarge"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="left|center"
+                android:text="@string/payumoney"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+        </com.andexert.library.RippleView>
+
+    </RelativeLayout>
+</LinearLayout>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <integer name="ripple_aplha">50</integer>
+    <integer name="ripple_aplha_filter_buttons">100</integer>
+    <integer name="ripple_aplha_filter_sort">150</integer>
+    <integer name="ripple_framerate">5</integer>
+    <integer name="ripple_framerate_fast">10</integer>
+    <integer name="ripple_duration">100</integer>
+    <integer name="ripple_duration_fast">50</integer>
+
+
+</resources>

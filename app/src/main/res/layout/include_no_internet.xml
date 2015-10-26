@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/noInternetLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--<ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/check_connection" />
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/retry_button_ripple_container"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/address_button_size"
+            android:layout_marginTop="@dimen/margin_large"
+            app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+            app:rv_color="@color/white"
+            app:rv_framerate="@integer/ripple_framerate"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <Button
+                android:id="@+id/retryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/default_button_round_corners"
+                android:text="@string/retry" />
+        </com.andexert.library.RippleView>
+    </LinearLayout>
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progressWheel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        wheel:matProg_barColor="@color/colorAccent"
+        wheel:matProg_progressIndeterminate="true" />
+</RelativeLayout>

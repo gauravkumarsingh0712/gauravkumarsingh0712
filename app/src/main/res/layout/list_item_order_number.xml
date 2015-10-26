@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/abc_popup_background_mtrl_mult">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/windowDarkBackground">
+        <!--android:background="@color/windowDarkBackground"-->
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rippleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:rv_alpha="@integer/ripple_aplha"
+            app:rv_color="@color/material_grey_500"
+            app:rv_framerate="@integer/ripple_framerate_fast"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <TextView
+                android:id="@+id/txtOrderNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:padding="@dimen/padding_normal"
+                android:text="Order Number: M550364838"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <TextView
+                android:id="@+id/txtPaymentType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtOrderNumber"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="Payment Type" />
+
+            <TextView
+                android:id="@+id/txtPaymentState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPaymentType"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="Payment State" />
+
+            <TextView
+                android:id="@+id/txtCreated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPaymentState"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="Created" />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtCreated"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="Total" />
+        </com.andexert.library.RippleView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

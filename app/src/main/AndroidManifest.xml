@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mirraw.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- (PAYPAL PERMISSIONS BELOW) -->
+
+
+    <!-- for card.io card scanning -->
+    <!--<uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />-->
+
+    <!--
+    &lt;!&ndash; for most things, including card.io & paypal &ndash;&gt;
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    -->
+    <!-- (PAYPAL PERMISSIONS ENDS HERE) -->
+    <!--android:largeHeap="true"-->
+    <application
+        android:name=".Mirraw"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <receiver android:name=".receivers.NetWorkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".services.SyncService"
+            android:enabled="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name" />
+
+        <!--TEST KEY-->
+        <!--<meta-data
+        android:name="payu_merchant_id"
+        android:value="0MQaQP" />
+    -->
+
+        <!--TEST KEY -->
+        <!--<meta-data
+            android:name="payu_merchant_id"
+            android:value="gtKFFx" />-->
+
+        <!--PRODUCTION KEY-->
+        <meta-data
+            android:name="payu_merchant_id"
+            android:value="UVbudj" />
+
+        <meta-data
+            android:name="payu_disable_back"
+            android:value="false" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ui.activities.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.HomeActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.SearchResultsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeColorControlActiviated"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.CartActivity"
+            android:label="@string/cart"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.ProductDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.AddAddressActivity"
+            android:label="@string/add_address"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+        <activity
+            android:name=".ui.activities.EditAddressActivity"
+            android:label="@string/edit_address"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+        <activity
+            android:name=".ui.activities.AddBillingShippingActivity"
+            android:label="@string/add_address"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+        <activity
+            android:name=".ui.activities.ConfirmAddressActivity"
+            android:label="@string/confirm_address"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.ViewAddressActivity"
+            android:label="@string/change_edit_address"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.PaymentActivity"
+            android:label="@string/title_activity_payment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.SelectCountryActivity"
+            android:label="@string/title_activity_select_country"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.payu.sdk.PaymentOptionsActivity"
+            android:configChanges="orientation|keyboard|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/PaymentActivityTheme" />
+        <activity
+            android:name="com.payu.sdk.ProcessPaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PaymentActivityTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.activities.FiltersActivity"
+            android:label="@string/title_activity_filters"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.DesignDemo" />
+        <activity
+            android:name=".ui.activities.ThankYouActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.VerifyPaypalResponseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.SelectStateActivity"
+            android:label="@string/title_activity_select_state"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.EmailLoginActivity"
+            android:label="@string/title_activity_email_login"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".ui.activities.RegisterActivity"
+            android:label="@string/register"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".ui.activities.ForgotPasswordActivity"
+            android:label="@string/title_activity_forgot_password"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".ui.activities.PasswordResetMailActivity"
+            android:label="@string/title_activity_password_reset_mail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.ProductListingActivity"
+            android:label="@string/title_activity_product_listing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.ZoomInAndZoomOutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeToolBar" />
+
+        <!-- (PAYPAL ACTIVITIES AND SERVICES BELOW) -->
+
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
+
+        <activity
+            android:name="com.paypal.android.sdk.payments.PaymentActivity"
+            android:theme="@style/PaymentActivityTheme" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.LoginActivity"
+            android:theme="@style/PaymentActivityTheme" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.PaymentMethodActivity"
+            android:theme="@style/PaymentActivityTheme" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity"
+            android:theme="@style/PaymentActivityTheme" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity"
+            android:theme="@style/PaymentActivityTheme" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity"
+            android:theme="@style/PaymentActivityTheme" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity"
+            android:theme="@style/PaymentActivityTheme" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity"
+            android:theme="@style/PaymentActivityTheme" />
+        <activity
+            android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity"
+            android:theme="@style/PaymentActivityTheme" />
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.DataEntryActivity" />
+
+        <!-- (PAYPAL ACTIVITIES AND SERVICES ENDS HERE) -->
+
+        <activity
+            android:name=".ui.activities.RegisterSuccessActivity"
+            android:label="@string/title_activity_register_success"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.activities.OrdersActivity"
+            android:label="@string/title_activity_order_tracking"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.activities.OrderDetailsActivity"
+            android:label="@string/title_activity_order_details"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.activities.OrderInformationActivity"
+            android:label="@string/title_activity_order_information"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".ui.activities.AppIntroActivity"
+            android:label="@string/title_activity_order_information"
+            android:screenOrientation="portrait"></activity>
+
+    </application>
+
+</manifest>

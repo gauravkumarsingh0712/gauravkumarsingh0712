@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/abc_popup_background_mtrl_mult">
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rippleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/grid_background"
+            app:rv_alpha="@integer/ripple_aplha"
+            app:rv_color="@color/material_grey_500"
+            app:rv_framerate="@integer/ripple_framerate"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <ImageView
+                android:id="@+id/searchResultImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:background="@color/placeholder_background"
+                android:gravity="center"
+                android:src="@drawable/placeholder_image_large" />
+
+            <TextView
+                android:id="@+id/searchResultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/searchResultImageView"
+                android:layout_alignRight="@id/searchResultImageView"
+                android:layout_below="@id/searchResultImageView"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:paddingLeft="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small"
+                android:singleLine="true"
+                android:text="title"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/searchResultDesignerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/searchResultImageView"
+                android:layout_alignRight="@id/searchResultImageView"
+                android:layout_below="@id/searchResultTextView"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:paddingLeft="@dimen/padding_small"
+                android:singleLine="true"
+                android:text="Designer"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_small" />
+
+            <LinearLayout
+                android:id="@+id/productLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/searchResultImageView"
+                android:layout_alignRight="@id/searchResultImageView"
+                android:layout_below="@+id/searchResultDesignerTextView"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_small">
+
+                <TextView
+                    android:id="@+id/txtPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="price"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/txtPriceDiscounted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="discount"
+                    android:textColor="@android:color/white" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtDiscount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/searchResultImageView"
+                android:layout_alignRight="@id/searchResultImageView"
+                android:layout_below="@+id/productLL"
+                android:paddingBottom="@dimen/paddin_xsmall"
+                android:paddingLeft="@dimen/padding_small"
+                android:text="%"
+                android:textColor="@color/red" />
+
+        </com.andexert.library.RippleView>
+    </RelativeLayout>
+
+</RelativeLayout>

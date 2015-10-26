@@ -1,0 +1,48 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <!--<item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />-->
+    <item
+        android:id="@+id/action_login_logout"
+        android:orderInCategory="200"
+        android:title="Logout"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_track_orders"
+        android:orderInCategory="300"
+        android:title="@string/action_my_orders"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:orderInCategory="100"
+        android:title="@string/action_search"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_cart"
+        android:icon="@drawable/ic_shopping_cart_24dp"
+        android:orderInCategory="200"
+        android:title="@string/action_cart"
+        app:actionLayout="@layout/menu_item_cart_count"
+        app:showAsAction="always"></item>
+
+    <item
+        android:id="@+id/action_us"
+        android:checkable="true"
+        android:orderInCategory="400"
+        android:title="Test for US?"
+        app:showAsAction="never"></item>
+
+    <item
+        android:id="@+id/action_staging"
+        android:checkable="true"
+        android:orderInCategory="500"
+        android:title="Test for Staging?"
+        app:showAsAction="never"></item>
+
+</menu>

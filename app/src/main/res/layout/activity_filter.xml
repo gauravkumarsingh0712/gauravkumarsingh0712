@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right">
+
+                <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/clearButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+                    app:rv_color="@color/white"
+                    app:rv_framerate="@integer/ripple_framerate"
+                    app:rv_rippleDuration="@integer/ripple_duration"
+                    ripple:rv_type="rectangle">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/clear_button_selecter"
+                        android:text="@string/clear"
+                        android:textAllCaps="false" />
+                </com.andexert.library.RippleView>
+
+                <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/applyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+                    app:rv_color="@color/material_green_A100"
+                    app:rv_framerate="@integer/ripple_framerate"
+                    app:rv_rippleDuration="@integer/ripple_duration"
+                    ripple:rv_type="rectangle">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/green_button_small_corner"
+                        android:text="@string/apply"
+                        android:textAllCaps="false" />
+                </com.andexert.library.RippleView>
+            </LinearLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/green_color"
+            app:tabTextAppearance="@style/TabTextAppearance"
+            app:tabMode="scrollable" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>

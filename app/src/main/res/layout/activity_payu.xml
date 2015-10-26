@@ -1,0 +1,292 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mirraw.android.ui.activities.PaymentActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pay_btn_layout"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/padding_large"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/amount_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/fragmentContainer"
+                android:layout_alignRight="@+id/fragmentContainer"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:background="@drawable/shadow_border_layout"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_small">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/item_total" />
+
+                    <TextView
+                        android:id="@+id/total_payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Rs. 100"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/payment_options_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/fragmentContainer"
+                android:layout_below="@+id/amount_layout"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="@string/paymentOptionsHead" />
+
+
+            <LinearLayout
+                android:id="@+id/fragmentContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/payment_options_head"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:background="@drawable/shadow_border_layout"
+                android:minWidth="@dimen/width_normal"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+                <!--<include
+                    layout="@layout/payoptions_fragment"/>-->
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/payNowButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/fragmentContainer"
+                android:layout_alignRight="@id/fragmentContainer"
+                android:layout_below="@id/fragmentContainer"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:background="@drawable/my_button"
+                android:text="@string/payNow"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignLeft="@id/fragmentContainer"
+                android:layout_alignRight="@id/fragmentContainer"
+                android:layout_below="@+id/payNowButton"
+                android:layout_margin="@dimen/margin_normal"
+                android:background="#12000000" />
+
+
+            <TextView
+                android:id="@+id/order_status_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/fragmentContainer"
+                android:layout_alignRight="@id/fragmentContainer"
+                android:layout_below="@+id/view"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="@string/order_summary" />
+
+            <LinearLayout
+                android:id="@+id/order_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/fragmentContainer"
+                android:layout_alignRight="@id/fragmentContainer"
+                android:layout_below="@+id/order_status_head"
+                android:background="@drawable/shadow_border_layout"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 Item"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#12000000" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/item_total" />
+
+                    <TextView
+                        android:id="@+id/total_order_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Rs. 100" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/delivery" />
+
+                    <TextView
+                        android:id="@+id/delivery_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Rs. 100" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#12000000" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/total"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/total_amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Rs. 100" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/delivery_address_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/fragmentContainer"
+                android:layout_alignRight="@id/fragmentContainer"
+                android:layout_below="@+id/order_layout"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="@string/deliverToHead" />
+
+
+            <LinearLayout
+                android:id="@+id/address_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/fragmentContainer"
+                android:layout_alignRight="@id/fragmentContainer"
+                android:layout_below="@+id/delivery_address_head"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:background="@drawable/shadow_border_layout"
+
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hello_world"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/hello_world" />
+
+                <TextView
+                    android:id="@+id/state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hello_world" />
+
+                <TextView
+                    android:id="@+id/country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/hello_world" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mobile" />
+
+                    <TextView
+                        android:id="@+id/mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hello_world" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

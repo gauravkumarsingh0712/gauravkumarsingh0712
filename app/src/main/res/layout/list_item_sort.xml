@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sort_option"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/windowDarkBackground"
+    android:minWidth="150dp">
+
+    <com.andexert.library.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:ripple="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rippleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="150dp"
+        app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+        app:rv_color="@color/material_grey_500"
+        app:rv_framerate="@integer/ripple_framerate"
+        app:rv_rippleDuration="@integer/ripple_duration"
+        ripple:rv_type="rectangle">
+
+        <TextView
+            android:id="@+id/sortOptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:padding="@dimen/padding_normal"
+            android:text="Option"
+            android:textSize="@dimen/text_size_normal" />
+    </com.andexert.library.RippleView>
+    <!--<View-->
+    <!--android:id="@+id/viewSeparator"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_below="@id/sortOptionTextView"-->
+    <!--android:layout_marginLeft="@dimen/margin_small"-->
+    <!--android:layout_marginRight="@dimen/margin_small"-->
+    <!--android:alpha="0.2"-->
+    <!--android:background="@android:color/black"-->
+    <!--/>-->
+
+
+</RelativeLayout>

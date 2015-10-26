@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_blue_100">#B3E5FC</color>
+    <color name="light_blue_300">#4FC3F7</color>
+    <color name="light_blue_500">#03A9F4</color>
+    <color name="light_blue_900">#01579B</color>
+
+    <color name="green_100">#C8E6C9</color>
+    <color name="green_300">#81C784</color>
+    <color name="green_500">#4CAF50</color>
+    <color name="green_900">#1B5E20</color>
+
+
+    <color name="colorPrimary">@android:color/black</color>
+    <color name="colorPrimaryDark">@android:color/black</color>
+    <color name="buttonColor">#ff5a595b</color>
+    <color name="windowDarkBackground">#FF424242</color>
+
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="payuColorAccent">#000000</color>
+    <color name="background_color">#c6000000</color>
+
+    <color name="placeholder_background">#000000</color>
+
+    //product detail fragment
+    <color name="product_view_pager_background">#141414</color>
+
+
+    <color name="window_background">#FFF5F5F5</color>
+
+    <color name="login_fragment_background">#2F000000</color>
+
+    //ripple effect
+    <color name="material_grey_500">#9E9E9E</color>
+    <color name="ripple_green_button">#32C745</color>
+
+    //light line
+    <color name="light_line">#12000000</color>
+    <color name="blue_color">#011023</color>
+    <color name="green_color">#0e9a7d</color>
+    <color name="green_color_snackbar">#13cca3</color>
+    <color name="material_green_A100">#B9F6CA</color>
+    <color name="green_color_dark">#096b57</color>
+    <color name="black_color">#000000</color>
+
+    <color name="red">#FF0000</color>
+    <color name="item_text_bg">#c0000000</color>
+
+    //Snackbar
+    <color name="dark_grey">#171717</color>
+    <color name="light_black">#323232</color>
+    <color name="light_white">#e5e5e5</color>
+
+
+
+    //Button
+    <color name="button_green">#259a36</color>
+    <color name="button_green_pressed">#259a47</color>
+    <color name="android_default_button">#5A595B</color>
+    <color name="android_default_button_pressed">#8B8B8C</color>
+
+
+    <color name="grid_background">#3F3F3F</color>
+</resources>

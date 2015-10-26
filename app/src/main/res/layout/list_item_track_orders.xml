@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/abc_popup_background_mtrl_mult">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/windowDarkBackground"
+        android:padding="@dimen/margin_small">
+
+        <ImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="true"
+            android:background="@color/placeholder_background"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@id/imgProduct"
+            android:text="Title"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDesigner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitle"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@id/imgProduct"
+            android:text="Designer"
+            android:textSize="@dimen/text_size_small" />
+
+        <LinearLayout
+            android:id="@+id/variantsLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDesigner"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_toRightOf="@id/imgProduct"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Variants Text" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/variantsLL"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@id/imgProduct"
+            android:text="SubTotal" />
+
+        <TextView
+            android:id="@+id/txtQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPrice"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@id/imgProduct"
+            android:text="Quantity" />
+
+        <TextView
+            android:id="@+id/txtAddons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtQuantity"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@id/imgProduct"
+            android:text="Addons" />
+
+        <LinearLayout
+            android:id="@+id/lineItemAddonsLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAddons"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_toRightOf="@id/imgProduct"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Addons Text" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lineItemAddonsLL"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_toRightOf="@id/imgProduct"
+            android:text="Total" />
+
+    </RelativeLayout>
+</RelativeLayout>

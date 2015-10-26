@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/specsLL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_normal"
+    android:paddingRight="@dimen/margin_normal"
+    tools:context="com.mirraw.android.ui.fragments.ProductDetailSpecificationFragment">
+
+    <TextView
+        android:id="@+id/txtSpecification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Specification" />
+
+    <TableLayout
+        android:id="@+id/specsTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/productId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="Product ID"
+                 />
+
+            <TextView
+                android:id="@+id/txtProductId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_column="2"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/shipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="Shipping"
+                 />
+
+            <TextView
+                android:id="@+id/txtShipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_column="2"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal" />
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>

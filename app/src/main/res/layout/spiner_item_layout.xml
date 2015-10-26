@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/horizentol_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/stitching_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dp"
+        android:text="size"
+        android:visibility="gone" />
+
+    <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:ripple="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rippleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rv_alpha="@integer/ripple_aplha"
+        app:rv_color="@color/material_grey_500"
+        app:rv_framerate="@integer/ripple_framerate"
+        app:rv_rippleDuration="@integer/ripple_duration_fast"
+        ripple:rv_type="rectangle">
+
+        <Spinner
+            android:id="@+id/main_addon_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog" />
+    </com.andexert.library.RippleView>
+
+</LinearLayout>

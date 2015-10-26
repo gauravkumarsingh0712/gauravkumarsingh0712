@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <com.mirraw.android.Utils.HackyViewPager
+        android:id="@+id/productViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/product_view_pager_background" />
+
+    <ImageView
+        android:id="@+id/crossImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_cross_thick_dark" />
+
+
+    <com.mirraw.android.ui.widgets.viewpagerIndicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/padding_large"
+        app:fillColor="@android:color/white"
+        app:pageColor="#4B4B4B"
+        app:radius="3dp"
+        app:strokeWidth="0dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/margin_normal"
+            android:background="@drawable/abc_popup_background_mtrl_mult">
+
+            <LinearLayout
+                android:layout_width="@dimen/width_normal"
+                android:layout_height="wrap_content"
+                android:background="@color/grid_background"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/userName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name"
+
+
+                        android:singleLine="true" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/userEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+
+
+                        android:singleLine="true" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true">
+
+                    <EditText
+                        android:id="@+id/userPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/password"
+                        android:inputType="textPassword" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true">
+
+                    <EditText
+                        android:id="@+id/userConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/confirm_password"
+                        android:inputType="textPassword" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/register_ripple_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+                    app:rv_color="@color/white"
+                    app:rv_framerate="@integer/ripple_framerate"
+                    app:rv_rippleDuration="@integer/ripple_duration"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    ripple:rv_type="rectangle">
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_button_round_corners"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:paddingRight="@dimen/padding_large"
+                    android:text="@string/register"
+                    android:textAllCaps="true" />
+                </com.andexert.library.RippleView>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</ScrollView>
+

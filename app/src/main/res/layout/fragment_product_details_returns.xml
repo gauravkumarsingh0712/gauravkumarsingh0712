@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/margin_normal"
+    android:paddingRight="@dimen/margin_normal"
+    tools:context="com.mirraw.android.ui.fragments.ProductDetailReturnsFragment">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Time"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/time"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal" />
+
+    <TextView
+        android:id="@+id/process"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTime"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Process"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtProcess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/process"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"/>
+
+    <TextView
+        android:id="@+id/refunds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtProcess"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Refunds/Replacements"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtRefunds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/refunds"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"/>
+
+</RelativeLayout>

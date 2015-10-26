@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_normal"
+    android:layout_marginRight="@dimen/margin_normal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@drawable/abc_popup_background_mtrl_mult">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/grid_background">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_normal">
+
+                <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/productImageRippleView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    app:rv_alpha="@integer/ripple_aplha"
+                    app:rv_color="@color/material_grey_500"
+                    app:rv_framerate="@integer/ripple_framerate"
+                    app:rv_rippleDuration="@integer/ripple_duration"
+                    ripple:rv_type="rectangle">
+
+                    <ImageView
+                        android:id="@+id/productImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="@color/placeholder_background"
+                        android:minHeight="80dp"
+                        android:minWidth="80dp"
+                        android:src="@mipmap/ic_launcher" />
+                </com.andexert.library.RippleView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/productDescriptionTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="@dimen/margin_small"
+                            android:layout_toLeftOf="@+id/removeImageButton"
+                            android:text="product descriptions which can be very very ver long "
+                            android:textSize="@dimen/text_size_large"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/removeImageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_cross_thick_dark" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/designerTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/padding_small"
+                        android:text="DEsigner"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/quantityTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/quantity" />
+
+                        <Button
+                            android:id="@+id/quantitySpinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:layout_marginRight="@dimen/margin_normal"
+                            android:layout_toRightOf="@+id/quantityTextView"
+                            android:text="0">
+
+                        </Button>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/variantLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/addonlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/price" />
+
+                        <TextView
+                            android:id="@+id/totalTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Rs 500" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/sub_total" />
+
+                        <TextView
+                            android:id="@+id/subTotalTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="Rs 500" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/outOfStockTextView"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:text="Out of Stock."
+                        android:textColor="@color/red" />
+                    <!--</RelativeLayout>-->
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

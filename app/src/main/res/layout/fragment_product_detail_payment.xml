@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/margin_normal"
+    android:paddingRight="@dimen/margin_normal"
+    tools:context="com.mirraw.android.ui.fragments.ProductDetailPaymentFragment">
+
+    <TextView
+        android:id="@+id/paymentIndia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Payments in India"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtPaymentIndia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/paymentIndia"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="test" />
+
+    <TextView
+        android:id="@+id/paymentInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPaymentIndia"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Payments outside India/International"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtPaymentInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/paymentInt"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="test" />
+
+</RelativeLayout>

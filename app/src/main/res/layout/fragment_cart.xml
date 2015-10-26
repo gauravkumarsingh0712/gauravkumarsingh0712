@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <!--<TextView
+        android:id="@+id/emptyCartTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="There aren't any products in your cart yet." />-->
+
+
+    <TextView
+        android:id="@+id/noInternetTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/check_connection" />
+
+    <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:ripple="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/retry_button_ripple_container"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/address_button_size"
+        android:layout_below="@id/noInternetTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_large"
+        app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+        app:rv_color="@color/white"
+        app:rv_framerate="@integer/ripple_framerate"
+        app:rv_rippleDuration="@integer/ripple_duration"
+        ripple:rv_type="rectangle">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/default_button_round_corners"
+            android:text="@string/retry" />
+    </com.andexert.library.RippleView>
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progressWheel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        wheel:matProg_barColor="@android:color/white"
+        wheel:matProg_progressIndeterminate="true" />
+
+    <LinearLayout
+        android:id="@+id/empty_cartLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/cart_empty" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/empty_cart"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/cartListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/placeOrderLL"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:paddingBottom="@dimen/padding_normal"
+        android:scrollbars="none" />
+
+
+    <View
+        android:id="@+id/shadowView"
+        android:layout_width="wrap_content"
+        android:layout_height="6dp"
+        android:layout_above="@+id/placeOrderLL"
+        android:background="@drawable/above_shadow" />
+
+    <LinearLayout
+        android:id="@+id/placeOrderLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_color"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rippleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+            app:rv_color="@color/material_green_A100"
+            app:rv_framerate="@integer/ripple_framerate"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <Button
+                android:id="@+id/placeOrderButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green_color"
+                android:text="@string/place_order"
+                android:textColor="@color/white" />
+        </com.andexert.library.RippleView>
+
+        <!--  <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/placeOrderButton">
+
+              <LinearLayout
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:orientation="vertical">
+
+                  <ImageView
+                      android:id="@+id/money_back_image"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/right_arrow_white" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/money_back_image"
+                      android:gravity="center"
+                      android:text="@string/money_back_guarantee"
+                      android:textColor="@color/green_color"
+
+                      />
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:orientation="vertical">
+
+                  <ImageView
+                      android:id="@+id/world_wide_image"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/right_arrow_white" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/world_wide_image"
+                      android:gravity="center"
+                      android:text="@string/world_wide_shipping"
+                      android:textColor="@color/green_color" />
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:gravity="center"
+                  android:orientation="vertical">
+
+                  <ImageView
+                      android:id="@+id/days_returns_image"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/right_arrow_white" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/days_returns_image"
+                      android:gravity="center"
+                      android:text="@string/days_returns"
+                      android:textColor="@color/green_color" />
+              </LinearLayout>
+          </LinearLayout>-->
+    </LinearLayout>
+
+</RelativeLayout>

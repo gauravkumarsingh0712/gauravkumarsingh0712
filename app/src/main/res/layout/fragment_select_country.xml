@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/countrySearchQuery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_search_white_24dp"
+        android:focusableInTouchMode="true"
+        android:hint="Search here...."
+        android:padding="@dimen/padding_normal">
+
+        <requestFocus />
+    </EditText>
+
+
+    <View
+        android:id="@+id/backgroundShadow"
+        android:layout_width="wrap_content"
+        android:layout_height="6dp"
+        android:layout_below="@+id/countrySearchQuery"
+        android:background="@drawable/below_shadow" />
+
+    <include
+        android:id="@+id/connectionContainer"
+        layout="@layout/include_no_internet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/backgroundShadow"
+        android:clipToPadding="false"></android.support.v7.widget.RecyclerView>
+
+
+    <TextView
+        android:id="@+id/no_search_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:text="@string/search_result_empty" />
+
+</RelativeLayout>

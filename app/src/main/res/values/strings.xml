@@ -1,0 +1,217 @@
+<resources>
+    <string name="app_name">Mirraw</string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+      <string name="grid_layout_header_text">
+    Grid layout with header, spanning 2 columns
+  </string>
+
+    <string name="grid_layout_header">Grid layout with header</string>
+
+    //Search
+    <string name="content_not_found">Content not found</string>
+    <string name="internal_server_error">Internal Server Error</string>
+
+    //No internet
+    <string name="check_connection">Check your connection and try again.</string>
+    <string name="retry">Retry</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="problem_loading_data">Problem Loading Data</string>
+
+    //Cart Activity
+    <string name="cart">Cart</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="buy_now">Buy now</string>
+    <string name="place_order">Place Order</string>
+    <string name="out_of_stock">Out of Stock</string>
+    <string name="search_query_empty">Type to search</string>
+    <string name="search_result_empty">Sorry,there\'s no match for your search</string>
+    <string name="action_search">Search</string>
+    <string name="quantity">Quantity</string>
+    <string name="apply_coupon">Apply Coupon</string>
+    <string name="enter_coupon">Enter Coupon Code</string>
+    <string name="money_back_guarantee">MONEY BACK \nGUARANTEE</string>
+    <string name="world_wide_shipping">WORLD WIDE\n SHIPPING</string>
+    <string name="days_returns">DAYS \n RETURNS</string>
+    <string name="loading_addresses">Loading Addresses ...</string>
+    <string name="saving_addresses">Saving Address ...</string>
+    <string name="empty_cart">You have not loaded any products into me.</string>
+
+
+    //Address form screen
+    <string name="Address">Address</string>
+    <string name="BillingAddress">Billing Address</string>
+    <string name="ShippingAddress">Shipping Address</string>
+    <string name="street_address">Street Address</string>
+    <string name="add_address">Add Address</string>
+    <string name="edit_address">Edit Address</string>
+    <string name="confirm_address">Confirm Shipping Address</string>
+    <string name="change_edit_address">Edit/Change Address</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="landmark">landmark</string>
+    <string name="phone">Phone</string>
+    <string name="mobile">Mobile</string>
+    <string name="pincode">Pincode</string>
+    <string name="country">Country/Region</string>
+    <string name="state">State/Province</string>
+    <string name="city">City</string>
+    <string name="ship_to_same_address">Ship to same Address</string>
+    <string name="save">Save</string>
+    <string name="add_address_btn">Add New Address</string>
+    <string name="edit_address_btn">Edit/Change Address</string>
+    <string name="remove_btn">Remove Address</string>
+    <string name="ship_btn">Ship Here</string>
+    <string name="edit_btn">Edit Address</string>
+    <string name="markDefaultAddress">Mark as Default Billing Address</string>
+    <string name="modify_address_failed">Failed to modify address</string>
+    <string name="delete_address_failed">Failed to delete address</string>
+    <string name="pinCodeBlankError">Enter \'none\' if not applicable</string>
+
+    //Payment
+    <string name="continue_to_payment">Continue to Payment</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="you_pay">You Pay</string>
+    <string name="item_total">Item Total</string>
+    <string name="shipping">Shipping</string>
+    <string name="discount">Discount</string>
+    <string name="total">Total</string>
+    <string name="grand_total">Grand Total</string>
+    <string name="cod_charge">COD Charge</string>
+    <string name="delivery">Delivery</string>
+    <string name="cardPayment">Credit/Debit Card</string>
+    <string name="creditCardPaypal">Credit Card</string>
+    <string name="netbanking">Net Banking</string>
+    <string name="cod">Cash On Delivery</string>
+    <string name="cbd">Cash Before Delivery</string>
+    <string name="payumoney">Payu Money</string>
+    <string name="wallets">Wallets</string>
+    <string name="paymentOptionsHead">Payment Options</string>
+    <string name="payNow">Pay Now</string>
+    <string name="orderNow">Order Now</string>
+    <string name="deliverToHead">Deliver To</string>
+    <string name="youPay">You Pay</string>
+    <string name="continue_shopping">Continue Shopping</string>
+    <string name="rate_the_app">RATE THE APP</string>
+    <string name="price_details">Price Details</string>
+    <string name="select_bank">Select Bank for NetBanking</string>
+    <string name="change_paymentOptions">Change Payment Options</string>
+    <string name="paypal_start_verification_msg">Please Wait..\n Your payment is being verified</string>
+    <string name="order_no">Order No: </string>
+    <string name="email_with_colon">Email: </string>
+    <string name="please_wait">Please wait ...</string>
+    <string name="creating_cbd">Creating Cash Before Delivery Order ...</string>
+    <string name="creating_cod">Creating Cash on Delivery Order ...</string>
+    <string name="creating_paypal">Creating Paypal Order ...</string>
+    <string name="woohoo">WOO HOO!</string>
+
+
+    //Paypal strings
+    <string name="paypal_txn_id">Paypal Txn Id: </string>
+    <string name="paypal_verify_no_internet_text">Your Paypal payment is Confirmed, but Verification is pending due to Internet Issues.</string>
+    <string name="paypal_verify_server_error_text">Paypal payment was successful but some error occurred on server side. Please contact customer care with information below</string>
+    <string name="activity_VerifyPaypalResponseActivity">Payment Status</string>
+
+    //CBD INFORMATION
+    <string name="cbd_info_text">Your product will be dispatched only after the payment has been collected by gharpay executive.</string>
+    <string name="cbd_info_learn_more_text">Learn More.</string>
+    <string name="cbd_info_learn_more_link">http://help.mirraw.com/customer/portal/articles/676158-what-is-cash-before-delivery-</string>
+
+    BANK DEPOSIT INFORMATION
+    <string name="bank_deposit_text">Payment must be made to the account within 3 days of placing the order. We shall email you bank details.</string>
+
+    //Product Detail
+    <string name="delivery_availability">Cash on Delivery Availability</string>
+    <string name="check">check</string>
+    <string name="title_activity_confirm_address">ConfirmAddressActivity</string>
+    <string name="title_activity_payment">Payment Options</string>
+    <string name="title_activity_select_country">Select a Country</string>
+    <string name="price">Price</string>
+    <string name="sub_total">Sub Total</string>
+
+    //Filter
+    <string name="title_activity_filters">Filters</string>
+    <string name="clear">Clear</string>
+    <string name="apply">Apply</string>
+
+    //Card Details
+    <string name="card_number">Card Number</string>
+    <string name="name_on_card">Name on Card</string>
+    <string name="expires">Expiry</string>
+    <string name="cvv">CVV</string>
+    <string name="card_name">Card name</string>
+    <string name="storedCards">Stored Cards</string>
+    <string name="paypal">Paypal</string>
+    <string name="bankdeposit">Bank Deposit</string>
+    <string name="title_activity_select_state">Select a State</string>
+    //Facebook App ID
+    <!--<string name="facebook_app_id">832523930188690</string>-->
+
+
+    //vihaan's facebook app_id
+    <string name="facebook_app_id">543338099151210</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    // sort by dialog fragment
+
+    <string name="sort_by">Sort By</string>
+    <string name="title_activity_product_listing">Mirraw</string>
+
+
+    <string name="title_activity_test">TestActivity</string>
+
+
+    //Google Login
+
+    <string name="play_services_error">Google Play services is not available.  This application will close.</string>
+    <string name="close">Close</string>
+
+
+    //Login
+    <string name="or_use_email">or use email address</string>
+    <string name="title_activity_email_login">Login</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="login_cancelled">Login Cancelled</string>
+
+    //Register
+    <string name="register">Register</string>
+    <string name="title_activity_forgot_password">Forgot Password</string>
+    <string name="title_activity_password_reset_mail">Forgot Password?</string>
+    <string name="title_activity_register_success">Account Successfully Created</string>
+    <string name="register_success">Your account has been successfully created.</string>
+
+    // local office server
+    <!--<string name="token">7d7b91da5458f42241981143a09ffc0b9f298a7cb6d65aa5c2d94fb6d199a51f</string>-->
+    <!--<string name="token">358d80296c28a029c24023d1c3d9e9ad9209e27d5ade9c323f5a36e513d64e6f</string>-->
+
+    //production server
+    <string name="token">a2487f5de1a4c4e5d99e459f7b8a4bc577238ff11792499235bfa86e71443a43</string>
+
+    //heroku server
+    <string name="staging_token">b688f95b2a5a275618f08e709c55934d77fe6280534a681f5b6bdee862e7997a</string>
+
+
+    //Category strings
+    <string name="title_activity_categories">CategoriesActivity</string>
+    <string name="no_category_products">No category products found</string>
+    <string name="action_cart">Cart</string>
+    <string name="title_activity_order_tracking">Orders</string>
+    <string name="action_my_orders">My Orders</string>
+    <string name="title_activity_edit_address">EditAddressActivity</string>
+    <string name="title_activity_order_details">Order Details</string>
+    <string name="title_activity_order_information">Order Details</string>
+
+    //Error strings
+    <string name="some_error_occured">Some error occured</string>
+
+
+    <string name="enter_pin_code">Enter Pin Code</string>
+
+
+</resources>

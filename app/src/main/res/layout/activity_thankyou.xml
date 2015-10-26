@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/order_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/woohooTextView"
+            style="@style/Base.TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/woohoo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/order_status"
+            style="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Order Placed Successfuly "
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/order_no_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/orderNoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_no"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/order_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="null" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--
+        <TextView
+            android:id="@+id/thanku"
+            style="@style/Base.TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:text="Thank You!" />-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+
+            android:id="@+id/continue_ripple_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_normal"
+            app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+            app:rv_color="@color/material_green_A100"
+            app:rv_framerate="@integer/ripple_framerate"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <Button
+                android:id="@+id/continueShoppingBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_button"
+                android:paddingLeft="@dimen/padding_normal"
+                android:paddingRight="@dimen/padding_normal"
+                android:text="@string/continue_shopping" />
+        </com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+
+            android:id="@+id/rate_ripple_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/continue_ripple_view"
+            android:layout_alignRight="@+id/continue_ripple_view"
+            android:layout_below="@+id/continue_ripple_view"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+            app:rv_color="@color/material_green_A100"
+            app:rv_framerate="@integer/ripple_framerate"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <Button
+                android:id="@+id/rateAppBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_white"
+                android:text="@string/rate_the_app"
+                android:textColor="@color/black_color" />
+        </com.andexert.library.RippleView>
+    </RelativeLayout>
+
+</LinearLayout>

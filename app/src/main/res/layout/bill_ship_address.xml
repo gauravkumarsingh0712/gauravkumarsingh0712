@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/connectionContainer"
+        layout="@layout/include_no_internet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+
+    <ScrollView
+        android:id="@+id/address_layout_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/saveButtonLL"
+        android:layout_centerHorizontal="true"
+        android:clipToPadding="false"
+        android:scrollbars="none">
+        <!--Relative layout is required to prevent the view from clipping at the top edge-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/bill_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin_normal"
+                android:background="@drawable/shadow_border_layout"
+                android:minWidth="@dimen/width_normal"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/BillingAddress"
+                    android:textStyle="bold" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/nameBillEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name"
+                        android:singleLine="true"
+                        android:text="" />
+                    <!--android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "/>-->
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!--<android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/landmarkBillEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/landmark"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>-->
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/countryBillEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+
+                        android:hint="@string/country" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/stateBillEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/state"
+                        android:singleLine="true" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/cityBillEditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/city"
+                        android:minWidth="@dimen/width_normal"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/pinCodeBillTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/pinBillEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/pincode"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/addressBillEditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/street_address"
+                        android:inputType="textMultiLine"
+                        android:maxLength="255"
+                        android:minWidth="@dimen/width_normal" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/mobileBillEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/phone"
+                        android:inputType="number"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/shipToSameAddressCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:minWidth="@dimen/width_normal"
+                    android:text="@string/ship_to_same_address" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ship_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bill_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/margin_normal"
+                android:background="@drawable/shadow_border_layout"
+                android:minWidth="@dimen/width_normal"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ShippingAddress"
+                    android:textStyle="bold" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/nameShipEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name"
+                        android:singleLine="true"
+                        android:text="" />
+                    <!--android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "/>-->
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!--<android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/landmarkBillEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/landmark"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>-->
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/countryShipEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+
+                        android:hint="@string/country" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/stateShipEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/state"
+                        android:singleLine="true" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/cityShipEditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/city"
+                        android:minWidth="@dimen/width_normal"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/pinCodeShipTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/pinShipEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/pincode"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/addressShipEditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/street_address"
+                        android:inputType="textMultiLine"
+                        android:minWidth="@dimen/width_normal" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/width_normal">
+
+                    <EditText
+                        android:id="@+id/mobileShipEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/phone"
+                        android:inputType="number"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <!--<CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:minWidth="@dimen/width_normal"
+                    android:text="@string/ship_to_same_address" />-->
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/shadowView"
+        android:layout_width="wrap_content"
+        android:layout_height="6dp"
+        android:layout_above="@+id/saveButtonLL"
+        android:background="@drawable/above_shadow" />
+
+    <LinearLayout
+        android:id="@+id/saveButtonLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_color"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/save_button_ripple_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+            app:rv_color="@color/material_green_A100"
+            app:rv_framerate="@integer/ripple_framerate"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green_color"
+                android:text="@string/save" />
+        </com.andexert.library.RippleView>
+
+    </LinearLayout>
+</RelativeLayout>

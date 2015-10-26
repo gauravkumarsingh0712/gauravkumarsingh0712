@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/abc_popup_background_mtrl_mult">
+
+    <RelativeLayout
+        android:id="@+id/orderSummaryDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/windowDarkBackground">
+
+        <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:ripple="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rippleView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:rv_alpha="@integer/ripple_aplha"
+            app:rv_color="@color/material_grey_500"
+            app:rv_framerate="@integer/ripple_framerate_fast"
+            app:rv_rippleDuration="@integer/ripple_duration"
+            ripple:rv_type="rectangle">
+
+            <TextView
+                android:id="@+id/txtDesignerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/black"
+                android:padding="@dimen/padding_normal"
+                android:text="Designer"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <TextView
+                android:id="@+id/txtStateDesigner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDesignerName"
+                android:layout_margin="@dimen/margin_small"
+                android:text="State:" />
+
+            <TextView
+                android:id="@+id/txtCourierDesigner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtStateDesigner"
+                android:layout_margin="@dimen/margin_small"
+                android:text="Courier Company:" />
+
+            <TextView
+                android:id="@+id/txtTrackingNumberDesigner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCourierDesigner"
+                android:layout_margin="@dimen/margin_small"
+                android:text="Tracking number:" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrlImages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTrackingNumberDesigner"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/imagesLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small"
+                    android:orientation="horizontal"></LinearLayout>
+
+            </HorizontalScrollView>
+
+        </com.andexert.library.RippleView>
+    </RelativeLayout>
+
+</RelativeLayout>

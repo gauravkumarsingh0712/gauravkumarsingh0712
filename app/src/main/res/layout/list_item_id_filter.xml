@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andexert.library.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clearButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+    app:rv_color="@color/material_grey_500"
+    app:rv_framerate="@integer/ripple_framerate"
+    app:rv_rippleDuration="@integer/ripple_duration"
+    ripple:rv_type="rectangle">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_large">
+
+        <CheckBox
+            android:id="@+id/idFilterCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/idFilterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="filter"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/idFilterCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:text="(20)"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+</com.andexert.library.RippleView>

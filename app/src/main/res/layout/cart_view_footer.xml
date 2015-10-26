@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal">
+
+    <RelativeLayout
+        android:id="@+id/coupun_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@drawable/abc_popup_background_mtrl_mult">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grid_background"
+            android:padding="@dimen/padding_normal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/apply_coupon_ripple_view">
+
+                <EditText
+                    android:id="@+id/coupon_code_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_coupon"
+                    android:singleLine="true"
+                    android:text="" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <com.andexert.library.RippleView xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/apply_coupon_ripple_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                app:rv_alpha="@integer/ripple_aplha_filter_buttons"
+                app:rv_color="@color/white"
+                app:rv_framerate="@integer/ripple_framerate"
+                app:rv_rippleDuration="@integer/ripple_duration"
+
+                ripple:rv_type="rectangle">
+
+                <Button
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:id="@+id/button_apply_coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_button_round_corners"
+                    android:text="@string/apply_coupon" />
+            </com.andexert.library.RippleView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/price_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/coupun_layout"
+        android:layout_below="@id/coupun_layout"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:paddingLeft="@dimen/padding_normal"
+        android:text="@string/price_details" />
+
+
+    <LinearLayout
+        android:id="@+id/order_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/price_details"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@drawable/abc_popup_background_mtrl_mult"
+        android:minWidth="@dimen/width_normal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/grid_background"
+            android:padding="@dimen/padding_normal">
+
+            <RelativeLayout
+                android:id="@+id/item_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_normal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/item_total" />
+
+                <TextView
+                    android:id="@+id/item_total_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Rs.1500" />
+
+            </RelativeLayout>
+
+            <!--<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_normal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/delivery" />
+
+                <TextView
+                    android:id="@+id/delivery_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Rs.200" />
+
+            </RelativeLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/discount_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_total"
+                android:layout_marginBottom="@dimen/margin_normal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/discount" />
+
+                <TextView
+                    android:id="@+id/discount_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="-Rs.600" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/discount_view"
+                android:layout_marginBottom="@dimen/margin_normal">
+
+                <TextView
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/total" />
+
+                <TextView
+                    android:id="@+id/total_amt"
+                    style="@android:style/TextAppearance.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Rs.1100" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

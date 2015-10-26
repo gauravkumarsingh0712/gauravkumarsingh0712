@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/abc_popup_background_mtrl_mult">
+
+    <RelativeLayout
+        android:id="@+id/orderSummaryRLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/windowDarkBackground">
+
+        <TextView
+            android:id="@+id/orderSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:padding="@dimen/padding_normal"
+            android:text="Order Summary"
+            android:textSize="@dimen/text_size_xlarge" />
+
+        <TextView
+            android:id="@+id/txtState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/orderSummary"
+            android:layout_margin="@dimen/margin_small"
+            android:text="State:" />
+
+        <TextView
+            android:id="@+id/txtCourier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtState"
+            android:layout_margin="@dimen/margin_small"
+            android:text="Courier Company:" />
+
+        <TextView
+            android:id="@+id/txtTrackingNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCourier"
+            android:layout_margin="@dimen/margin_small"
+            android:text="Tracking number:" />
+
+        <TextView
+            android:id="@+id/txtItemTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTrackingNumber"
+            android:layout_margin="@dimen/margin_small"
+            android:text="Item total:" />
+
+        <TextView
+            android:id="@+id/txtDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtItemTotal"
+            android:layout_margin="@dimen/margin_small"
+            android:text="Discounts:" />
+
+        <TextView
+            android:id="@+id/txtShipping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDiscount"
+            android:layout_margin="@dimen/margin_small"
+            android:text="Shipping" />
+
+        <TextView
+            android:id="@+id/txtCod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtShipping"
+            android:layout_margin="@dimen/margin_small"
+            android:text="COD" />
+
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCod"
+            android:layout_margin="@dimen/margin_small"
+            android:text="Total:" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

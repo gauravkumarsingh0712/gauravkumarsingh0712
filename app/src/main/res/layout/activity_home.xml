@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/DrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimaryDark"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+
+            <!--<android.support.design.widget.TabLayout-->
+                <!--android:id="@+id/tabLayout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:tabIndicatorColor="@android:color/white"-->
+                <!--app:tabIndicatorHeight="6dp"-->
+                <!--app:tabSelectedTextColor="@android:color/white"-->
+                <!--app:tabTextColor="@android:color/white"-->
+                <!--app:layout_scrollFlags="scroll|enterAlways"-->
+                <!--/>-->
+
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <RelativeLayout
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@color/windowDarkBackground">
+
+        <RelativeLayout
+            android:id="@+id/navContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:scrollbars="vertical"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+
+</android.support.v4.widget.DrawerLayout>

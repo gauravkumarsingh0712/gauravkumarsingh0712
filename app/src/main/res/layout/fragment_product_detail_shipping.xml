@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/margin_normal"
+    android:paddingRight="@dimen/margin_normal"
+    tools:context="com.mirraw.android.ui.fragments.ProductDetailShippingFragment">
+
+    <TextView
+        android:id="@+id/shippingInIndia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Shipping in India" />
+
+    <TextView
+        android:id="@+id/locationsIndia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shippingInIndia"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Locations" />
+
+    <TextView
+        android:id="@+id/txtLocationsIndia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/locationsIndia"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal" />
+
+    <TextView
+        android:id="@+id/timeIndia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLocationsIndia"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Time" />
+
+    <TextView
+        android:id="@+id/txtTimeIndia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/timeIndia"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal" />
+
+    <TextView
+        android:id="@+id/chargesIndia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTimeIndia"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Charges" />
+
+    <TextView
+        android:id="@+id/txtChargesIndia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/chargesIndia"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal" />
+
+    <TextView
+        android:id="@+id/shippingInternational"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtChargesIndia"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Shipping Outside India/International" />
+
+    <TextView
+        android:id="@+id/locationsInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shippingInternational"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Locations" />
+
+    <TextView
+        android:id="@+id/txtLocationsInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/locationsInt"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="We ship worldwide" />
+
+    <TextView
+        android:id="@+id/txtNoteInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtLocationsInt"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal" />
+
+    <TextView
+        android:id="@+id/timeInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNoteInt"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Time" />
+
+    <TextView
+        android:id="@+id/txtTimeInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/timeInt"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal" />
+
+    <TextView
+        android:id="@+id/chargesInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTimeInt"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Charges"
+       />
+
+    <TextView
+        android:id="@+id/txtChargesInt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/chargesInt"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal" />
+
+
+</RelativeLayout>
